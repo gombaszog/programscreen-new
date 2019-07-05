@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/gombaszog/programscreen-new.svg?branch=master)](https://travis-ci.org/gombaszog/programscreen-new)
 # Gombaszög Események App
 
 Egy Vue.js 2-ben megírt webalkalmazás, amit a *https://www.gombaszog.sk/api/* szolgál ki
