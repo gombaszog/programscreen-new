@@ -1,0 +1,32 @@
+@import '../src/assets/vendor/flexboxgrid.min.css';
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    // font-family: sans-serif;
+    background: url('../static/images/background.jpg') no-repeat center center fixed; 
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+
+    @media screen and (min-width: 1700px) {
+        overflow-y: hidden;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.program-list-label {
+    font-size: 32px;
+    line-height: 1;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #23361b;
+    color: #fff;
+}

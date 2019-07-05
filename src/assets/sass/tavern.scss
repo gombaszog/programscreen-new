@@ -1,0 +1,24 @@
+.kocsma-first-screen-component,
+.kocsma-second-screen-component {
+    height: 100vh;
+    background: rgba(255, 255, 255, .85);
+    font-size: 18px;
+    line-height: 1.4;
+
+    h2 {
+        margin-bottom: 10px;
+    }        
+    
+    .main-col {
+        padding: 15px 45px;
+
+        & > .row {
+            margin-bottom: 25px;
+
+            div:nth-child(3),
+            div:nth-child(4) {
+                text-align: right;
+            }
+        }
+    }
+}
