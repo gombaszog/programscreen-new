@@ -17,3 +17,4 @@ deploy:
  local_dir: dist
  on:
    branch: master
+ fqdn: program.gombaszog.sk
