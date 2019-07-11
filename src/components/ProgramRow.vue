@@ -69,7 +69,7 @@ export default {
 
 <style lang="scss" scoped>
     .program-row-component {
-        padding: 17px 0;
+        padding: 10px 0;
         background: rgba(192,192,192,0.8);
         align-items: center;
         opacity: 1;
@@ -95,10 +95,10 @@ export default {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.7rem;
 
             @media screen and (max-width: 1700px) {
-                font-size: 1.7rem;
+                font-size: 1.6rem;
             }
 
             @media screen and (max-width: 1365px) {
@@ -115,7 +115,7 @@ export default {
 
             .start {
                 font-weight: bold;
-                font-size: 2.5rem;
+                font-size: 2.2rem;
 
                 @media screen and (max-width: 1700px) {
                     font-size: 2.1rem;
@@ -137,16 +137,16 @@ export default {
             }
 
             .title {
-                font-size: 2rem;
+                font-size: 1.8rem;
                 font-weight: 600;
                 margin-bottom: 5px;
 
                 @media screen and (max-width: 1700px) {
-                    font-size: 1.9rem;
+                    font-size: 1.7rem;
                 }
 
                 @media screen and (max-width: 1365px) {
-                    font-size: 1.8rem;
+                    font-size: 1.6rem;
                 }
 
                 @media screen and (max-width: 700px) {
@@ -181,7 +181,7 @@ export default {
             justify-content: center;
             flex-direction: column;
             align-items: center;
-            font-size: 1.7rem;
+            font-size: 1.6rem;
             font-weight: 600;
 
             @media screen and (max-width: 1700px) {
@@ -198,10 +198,10 @@ export default {
 
             .partner {
                 margin-top: 5px;
-                font-size: 1.2rem;
+                font-size: 1.1rem;
 
                 @media screen and (max-width: 1700px) {
-                    font-size: 1.1rem;
+                    font-size: 1rem;
                 }
 
                 @media screen and (max-width: 700px) {
