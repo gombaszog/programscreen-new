@@ -7,7 +7,7 @@
         </div>
         <div class="main-box col-xs-12 col-sm-6 col-md-7">
             <div class="title">{{programData.name}}</div>
-            <div class="description-container" v-if="programData.description && showDescription" ref="descriptionContainer">
+            <div class="description-container" v-show="programData.description && showDescription" ref="descriptionContainer">
                 <div class="description-content">{{programData.description}}</div>
             </div>
         </div>
@@ -32,9 +32,9 @@ export default {
             let el = this.$refs.descriptionContainer
             if (typeof el !== 'undefined') {
                 let parentHeight = el.offsetHeight
+                let descrContent = el.children[0]
 
-                if(parentHeight > 22) {
-                    let descrContent = el.children[0]
+                if(descrContent.offsetHeight > parentHeight) {
                     if(!descrContent.classList.contains('slide')) {
                         descrContent.classList.add('slide')
                     }
