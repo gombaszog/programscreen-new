@@ -19,7 +19,6 @@ export default {
             .catch(error => {
                 console.warn(error)
                 let localProgramData = localStorage.getItem('programData')
-
                 if(localProgramData) {
                     commit('setProgramData', JSON.parse(localProgramData) )
                     let actualPrograms = processPrograms(JSON.parse(localProgramData).program)[0]
@@ -35,6 +34,19 @@ export default {
                 if(response.status === 200) {
                     if(state.programData.sum !== response.data.sum) {
                         dispatch('FETCH_PROGRAMS')
+                    } else {
+                        if(state.programData.program.length > 0) {
+                            commit('setProgramData', state.programData )
+                            let actualPrograms = processPrograms(state.programData.program)[0]
+                            commit('setActualPrograms', actualPrograms)
+                        } else {
+                            let localProgramData = localStorage.getItem('programData')
+                            if(localProgramData) {
+                                commit('setProgramData', JSON.parse(localProgramData) )
+                                let actualPrograms = processPrograms(JSON.parse(localProgramData).program)[0]
+                                commit('setActualPrograms', actualPrograms)
+                            }
+                        }
                     }
                 } else {
                     console.warn('ERROR - CHECK_SUM: ', response.statusText)
