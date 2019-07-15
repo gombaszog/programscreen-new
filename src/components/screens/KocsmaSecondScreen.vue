@@ -103,7 +103,4 @@ export default {
 
 <style lang="scss" scoped>
     @import '../../assets/sass/tavern.scss';
-
-    .kocsma-second-screen-component {
-    }
 </style>

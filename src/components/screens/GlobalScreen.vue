@@ -37,10 +37,6 @@ export default {
             let currentTime = getCurrentTime()
             let processedArray = JSON.parse(JSON.stringify(this.actualPrograms))
 
-            if(hasUrlQuery('noalert')) {
-                return processedArray
-            }
-
             processedArray = processedArray.filter(prog => ( currentTime <= new Date(prog.start) ))
 
             return processedArray
@@ -56,6 +52,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .global-screen-component {
-    }
 </style>

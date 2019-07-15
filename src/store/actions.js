@@ -32,9 +32,7 @@ export default {
         return axios.get(config.API_URL + 'program?check=true', config.AXIOS_DEFAULTS)
             .then(response => {
                 if(response.status === 200) {
-                    if(state.programData.sum !== response.data.sum) {
-                        dispatch('FETCH_PROGRAMS')
-                    } else {
+                    if(state.programData.sum === response.data.sum) {
                         if(state.programData.program.length > 0) {
                             commit('setProgramData', state.programData )
                             let actualPrograms = processPrograms(state.programData.program)[0]
@@ -47,6 +45,8 @@ export default {
                                 commit('setActualPrograms', actualPrograms)
                             }
                         }
+                    } else {
+                        dispatch('FETCH_PROGRAMS')
                     }
                 } else {
                     console.warn('ERROR - CHECK_SUM: ', response.statusText)

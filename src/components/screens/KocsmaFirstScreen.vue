@@ -172,7 +172,4 @@ export default {
 
 <style lang="scss" scoped>
     @import '../../assets/sass/tavern.scss';
-
-    .kocsma-first-screen-component {
-    }
 </style>

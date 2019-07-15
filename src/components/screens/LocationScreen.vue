@@ -68,9 +68,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .location-screen-component {
-        // .coming {
-        //     animation: none
-        // }
-    }
 </style>

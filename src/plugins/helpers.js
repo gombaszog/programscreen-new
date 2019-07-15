@@ -14,11 +14,13 @@ export function processPrograms(programArray) {
     actualArray = programArray.filter(prog => currentTime <= new Date(prog.end))
     actualArray.forEach(prog => {
 
-        actualArray.forEach( (program, index) => {
-            if ( getDatesDiff(currentTime, new Date(program.start)) < 31) { // && getDatesDiff(currentTime, new Date(program.start)) > 0
-                Vue.set(actualArray[index], 'coming', true)
-            }
-        })
+        if(!hasUrlQuery('noalert')) {
+            actualArray.forEach( (program, index) => {
+                if ( getDatesDiff(currentTime, new Date(program.start)) < 31) { // && getDatesDiff(currentTime, new Date(program.start)) > 0
+                    Vue.set(actualArray[index], 'coming', true)
+                }
+            })
+        }
 
         if(!actualLocations.includes(prog.location)) {
             actualLocations.push(prog.location)
