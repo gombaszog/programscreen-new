@@ -1,6 +1,6 @@
 <template>
     <div class="progress-screen-component">
-        <div class="program-list-label">Éppen zajlik<template v-if="longPrograms"> - sok órás</template></div>
+        <div class="program-list-label">Éppen zajlik<template v-if="longPrograms"> - egész napos</template></div>
         <program-row
             v-for="(prog, index) in screenPrograms"
             :key="index"
@@ -37,7 +37,7 @@ export default {
             let programs = []
 
             if(this.longPrograms === true) {
-                programs = this.actualPrograms.filter(prog => ( currentTime >= new Date(prog.start) && currentTime <= new Date(prog.end) && getDatesDiff(new Date(prog.start), new Date(prog.end)) > 179 ) )
+                programs = this.actualPrograms.filter(prog => ( currentTime >= new Date(prog.start) && currentTime <= new Date(prog.end) && getDatesDiff(new Date(prog.start), new Date(prog.end)) > 239 ) )
 
                 if(programs.length < 1) {
                     this.$store.commit('addToSkipped', this.step)
@@ -48,7 +48,7 @@ export default {
                 return programs
             }
 
-            programs = this.actualPrograms.filter(prog => ( currentTime >= new Date(prog.start) && currentTime <= new Date(prog.end) && getDatesDiff(new Date(prog.start), new Date(prog.end)) < 180 ) )
+            programs = this.actualPrograms.filter(prog => ( currentTime >= new Date(prog.start) && currentTime <= new Date(prog.end) && getDatesDiff(new Date(prog.start), new Date(prog.end)) < 240 ) )
 
             if(programs.length < 1) {
                 this.$store.commit('addToSkipped', this.step)
@@ -71,7 +71,8 @@ export default {
 <style lang="scss" scoped>
     .progress-screen-component {
         .coming {
-            animation: none
+            // animation: none;
+            color: #333;
         }
     }
 </style>

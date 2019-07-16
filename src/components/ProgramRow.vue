@@ -83,7 +83,8 @@ export default {
         }
 
         &.coming {
-            animation: blinking 1s linear infinite;
+            // animation: blinking 1s linear infinite;
+            color: rgb(133, 0, 0);
         }
 
         .time-box,
@@ -216,7 +217,7 @@ export default {
         100% {transform: translateY(-85%);}
     }
 
-    @keyframes blinking {
-        50% { opacity: .6; }
-    }
+    // @keyframes blinking {
+    //     50% { opacity: .6; }
+    // }
 </style>
